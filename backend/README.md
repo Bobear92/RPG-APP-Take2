@@ -1,21 +1,3 @@
-Backend Boilerplate
+The backend to my RPG APP.
 
-when cloning down add secret and port to .env file
-
-i can edit this on github
-
-
-when pulling down for the first time remember to delete the .git file. 
-Find it by 
-```
-ls -a
-```
-Delete it with 
-```
-rm -rf .git
-```
-Then do the 
-```
-git init 
-```
-for a new repo. 
+Things to think of: - keep database simple. - each table should only have one thing. - more simple tables is better than fewer big and complex ones.
