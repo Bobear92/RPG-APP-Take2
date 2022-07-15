@@ -1,5 +1,5 @@
 {
-  "name": "rpg_campaign_app_backend",
+  "name": "rpg_backend",
   "version": "1.0.0",
   "description": "The backend for the app hopefully better organized.",
   "main": "index.js",

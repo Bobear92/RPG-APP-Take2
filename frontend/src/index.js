@@ -1,23 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
-
-import { Header } from "./components";
-
-const App = () => {
-  return (
-    <Router>
-      <div id="App">
-        <Header />
-      </div>
-    </Router>
-  );
-};
+import { App } from "./components";
 
 ReactDOM.render(<App />, document.getElementById("root"));

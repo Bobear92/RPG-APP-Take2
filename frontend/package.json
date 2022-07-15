@@ -1,11 +1,11 @@
 {
-  "name": "react_boilerplate",
+  "name": "rpg_frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "react-scripts start",
-    "client:build": "react-scripts build"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
