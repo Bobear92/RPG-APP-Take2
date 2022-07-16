@@ -1,0 +1,10 @@
+.saved-info-main-container {
+  border: 1.5px solid black;
+  height: 80vh;
+  padding: 0.5rem;
+  background-image: url("https://www.teahub.io/photos/full/113-1133148_book-of-imagination-books-fantasy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  overflow: auto;
+}

@@ -1,0 +1,22 @@
+.home-brew-rules-main-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid black;
+  height: 80vh;
+  padding: 0.5rem;
+  background-image: url("https://i.pinimg.com/736x/af/f0/0c/aff00c7e284cc05403c755570240b51a.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.home-brew-rules-rule-map-main-component {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-brew-rules-rule-map-component {
+  margin: 1rem;
+  padding: 0.5rem;
+}
