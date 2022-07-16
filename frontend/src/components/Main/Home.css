@@ -1,0 +1,80 @@
+.home-main-container {
+  border: 1.5px solid black;
+  height: 80vh;
+  padding: 0.5rem;
+  background-image: url("https://preview.redd.it/sli03x8zdi751.png?auto=webp&s=1ddbd044e7a60010d18d3e2ee79a1436b564e185");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.home-top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: darkblue;
+  padding: 0.5rem;
+}
+
+.home-random-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.home-left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 70vh;
+  max-width: 90vh;
+  border: 1.5px solid black;
+  padding: 0.5rem;
+}
+
+.home-left-container-name {
+  color: rgb(94, 5, 5);
+  align-self: center;
+  background-color: black;
+  padding: 0.25rem;
+}
+
+.home-left-container-picture {
+  max-height: 50vh;
+}
+
+.home-left-container-description {
+  color: rgb(94, 5, 5);
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 0.25rem;
+}
+
+.home-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 70vh;
+  max-width: 90vh;
+  border: 1.5px solid black;
+  padding: 0.5rem;
+}
+
+.home-right-container-name {
+  color: rgb(94, 5, 5);
+  align-self: center;
+  background-color: black;
+  padding: 0.25rem;
+}
+
+.home-right-container-picture {
+  max-height: 50vh;
+  max-width: 40vh;
+}
+
+.home-right-container-description {
+  color: rgb(94, 5, 5);
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 0.25rem;
+}

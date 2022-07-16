@@ -8,13 +8,22 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { Header } from "./Main";
+import { Header, Home, Footer } from "./Main";
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-    </Router>
+    <>
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 };
 
