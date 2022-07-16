@@ -1,0 +1,3 @@
+Home: 
+- getLocation
+- getNPC

@@ -1,0 +1,33 @@
+.npc-generator-main-container {
+  border: 1.5px solid black;
+  height: 80vh;
+  padding: 0.5rem;
+  background-image: url("https://www.teahub.io/photos/full/190-1905390_fantasy-library-concept-art.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  overflow: auto;
+}
+
+.npc-generator-top-container {
+  display: flex;
+  justify-content: center;
+}
+
+.npc-generator-h2 {
+  color: rgb(94, 5, 5);
+  background-color: black;
+  padding: .25rem;
+}
+
+.npc-generator-button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.npc-generator-npc-container{
+  color: rgb(94, 5, 5);
+  background-color: black;
+  padding: .25rem;
+  margin: .5rem;
+}

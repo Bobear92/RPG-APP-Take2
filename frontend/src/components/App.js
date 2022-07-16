@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import { Header, Home, Footer } from "./Main";
+import { NPC_Generator } from "./GM";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/npc-generator">
+            <NPC_Generator />
           </Route>
         </Switch>
         <Footer />

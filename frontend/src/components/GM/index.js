@@ -1,0 +1,1 @@
+export { default as NPC_Generator } from "./NPC_Generator";
