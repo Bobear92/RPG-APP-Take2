@@ -17,17 +17,9 @@ const NPG_Generator = () => {
 
   // https://chartopia.d12dev.com/chart/13054/
 
-  const [npc, setNpc] = useState({
-    name: "",
-    race: "",
-    occupation: "",
-    emotion: "",
-    goal: "",
-  });
+  const [npc, setNpc] = useState({});
 
   const generate = () => {
-    setNpc({ name: "", race: "", occupation: "", emotion: "", goal: "" });
-
     setNpc({
       name: name[Math.floor(Math.random() * name.length)],
       race: race[Math.floor(Math.random() * race.length)],
@@ -51,6 +43,7 @@ const NPG_Generator = () => {
         <button
           className="npc-generator-button"
           onClick={() => {
+            setNpc({});
             setButtonToggle(true);
             generate();
           }}
@@ -60,11 +53,11 @@ const NPG_Generator = () => {
       </div>
 
       <div className="npc-generator-npc-container">
-        <p>Name: {npc.name}</p>
-        <p>Race: {npc.race}</p>
-        <p>Occupation: {npc.occupation}</p>
-        <p>Emotion: {npc.emotion}</p>
-        <p>Goal: {npc.goal}</p>
+        <p>Name: {npc.name ? npc.name : null}</p>
+        <p>Race: {npc.race ? npc.race : null}</p>
+        <p>Occupation: {npc.occupation ? npc.occupation : null}</p>
+        <p>Emotion: {npc.emotion ? npc.emotion : null}</p>
+        <p>Goal: {npc.goal ? npc.goal : null}</p>
       </div>
     </div>
   );
