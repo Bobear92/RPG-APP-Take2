@@ -1,0 +1,41 @@
+.biomes-main-container {
+  border: 1.5px solid black;
+  height: 80vh;
+  padding: 0.5rem;
+  background-image: url("https://www.teahub.io/photos/full/190-1905390_fantasy-library-concept-art.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  overflow: auto;
+}
+
+.biomes-top-container {
+  display: flex;
+  justify-content: center;
+}
+
+.biomes-h2 {
+  color: rgb(94, 5, 5);
+  background-color: black;
+  padding: 0.25rem;
+}
+
+.biomes-biome-container {
+  color: rgb(56, 86, 10);
+  background-color: black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  overflow: auto;
+}
+
+
+
+.biomes-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: .5rem;
+  list-style-type: none;
+}
+

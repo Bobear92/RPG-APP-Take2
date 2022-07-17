@@ -5,7 +5,9 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="header-main-container">
-      <h1>Welcome to the Header Component</h1>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/npc-generator"> NPC Generator</NavLink>
+      <NavLink to="/biomes"> Biomes</NavLink>
     </header>
   );
 };
