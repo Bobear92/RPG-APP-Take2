@@ -118,7 +118,6 @@ const Biomes = () => {
       <div className="biomes-top-container">
         <h2 className="biomes-h2">Biomes</h2>
       </div>
-      <div className="biomes-button-containers"></div>
       <nav>
         <button
           onClick={() => {

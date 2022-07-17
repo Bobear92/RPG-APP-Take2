@@ -9,3 +9,4 @@ List of tables for database
 Locations (name, picture, description)
 NPCs (name, picture, description)
 NPC Generator (name, race, occupation, emotion, goal)
+Biomes (name, description, location, moisture)
