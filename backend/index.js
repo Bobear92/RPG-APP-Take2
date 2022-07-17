@@ -1,27 +1,33 @@
-// create the express server here
-
-require("dotenv").config();
-
-const { PORT } = process.env;
-
+// This is the Web Server
 const express = require("express");
 const server = express();
 
 const cors = require("cors");
 server.use(cors());
 
+// create logs for everything
 const morgan = require("morgan");
 server.use(morgan("dev"));
 
+// handle application/json requests
 server.use(express.json());
 
-const axios = require("axios");
-axios.defaults.adapter = require("axios/lib/adapters/http");
+// here's our static files
+const path = require("path");
+server.use(express.static(path.join(__dirname, "build")));
 
+// here's our API
 server.use("/api", require("./api"));
-// below is the same as above
-// const apiRouter = require("./api");
-// server.use("/api", apiRouter);
+
+// by default serve up the react app if we don't recognize the route
+server.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+// bring in the DB connection
+const { client } = require("./db");
+
+// Error handling
 
 server.use("*", (req, res, next) => {
   res.status(404).send({ error: "route not found" });
@@ -32,10 +38,15 @@ server.use((error, req, res, next) => {
   res.send({ error: error.message });
 });
 
-const client = require("./db/client");
+// connect to the server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, async () => {
+  console.log(`Server is running on ${PORT}!`);
 
-client.connect();
-
-server.listen(PORT, () => {
-  console.log("The server is up on port", PORT);
+  try {
+    await client.connect();
+    console.log("Database is open for business!");
+  } catch (error) {
+    console.error("Database is closed for repairs!\n", error);
+  }
 });

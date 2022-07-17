@@ -4,10 +4,10 @@
   "description": "The backend for the app hopefully better organized.",
   "main": "index.js",
   "scripts": {
-    "seed:dev": "nodemon ./db/seed.js",
-    "seed": "node ./db/seed.js",
     "start:dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "db:build": "node ./db/init_db",
+    "server:dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",

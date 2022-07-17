@@ -1,23 +1,20 @@
-/* ALL THEM REQUIRES GONNA GO HERE */
-const client = require("./client");
+const { client } = require("../index");
 
-async function createUser({ username, password }) {
+async function createUser({ username, password, admin, gm }) {
   try {
     const {
       rows: [user],
     } = await client.query(
       `
-        INSERT INTO users(username, password)
-        VALUES($1, $2)
-        ON CONFLICT (username) DO NOTHING
-        RETURNING *;
-        `,
-      [username, password]
+          INSERT INTO users(username, password, admin, gm)
+          VALUES($1, $2, $3, $4)
+          ON CONFLICT (username) DO NOTHING
+          RETURNING *;
+          `,
+      [username, password, admin, gm]
     );
 
-    delete user.password;
-
-    return user;
+    return user.username;
   } catch (error) {
     throw error;
   }
@@ -83,8 +80,38 @@ async function getUserByUsername(username) {
       return null;
     }
 
-    // delete user.password;
     const [user] = rows;
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function getAllUsers() {
+  try {
+    const { rows } = await client.query(
+      `
+      SELECT * from users 
+      `
+    );
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function deleteUser(id) {
+  try {
+    const {
+      rows: [user],
+    } = await client.query(
+      `
+    DELETE FROM users
+    where id = $1
+    RETURNING *;
+    `,
+      [id]
+    );
     return user;
   } catch (error) {
     throw error;
@@ -96,4 +123,6 @@ module.exports = {
   getUser,
   getUserById,
   getUserByUsername,
+  getAllUsers,
+  deleteUser,
 };
